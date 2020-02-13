@@ -67,7 +67,30 @@ public class Defination<E> implements LinkedlistAdt<E> {
         Node<E> temp = head;
         response = temp.getData();
         head = head.next;
+        size--;
         return response;
+    }
+
+    public E removeAfter(Node<E> node) {
+        E response = null;
+        Node<E> node4 = node.getNext();
+        if (node4 != null) {
+            response = node4.getData();
+            node.next = node4.getNext();
+            size--;
+        }
+        return response;
+    }
+
+    public E removeAt(int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            return removeFirst();
+        } else {
+            Node<E> store = getNode(index - 1);
+            return removeAfter(store);
+        }
     }
 
     @Override
@@ -76,9 +99,10 @@ public class Defination<E> implements LinkedlistAdt<E> {
     }
 
     @Override
-    public E remove() {
-        return removeFirst();
+    public E remove(int index) {
+        return removeAt(index);
     }
+
 
     @Override
     public int search(E item) {

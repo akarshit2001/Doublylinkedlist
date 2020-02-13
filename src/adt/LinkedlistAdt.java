@@ -20,7 +20,7 @@ public interface LinkedlistAdt<E> {
      *
      * @return the "data" of the node removed from the end of the 'Doubly-Linked List'.
      */
-    E remove();
+    E remove(int index);
 
     /**
      * This method will search an item in the list.
