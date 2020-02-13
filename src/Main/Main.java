@@ -10,6 +10,8 @@ public class Main {
         def.add(898);
         def.add(982);
         def.add(896);
+        int c = def.remove();
+        System.out.println(c);
         System.out.println(def.toString());
 
     }

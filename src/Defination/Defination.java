@@ -60,8 +60,15 @@ public class Defination<E> implements LinkedlistAdt<E> {
         return response;
 
     }
-    //public void addAt
 
+    //public void addAt
+    public E removeFirst() {
+        E response;
+        Node<E> temp = head;
+        response = temp.getData();
+        head = head.next;
+        return response;
+    }
 
     @Override
     public void add(E item) {
@@ -70,7 +77,7 @@ public class Defination<E> implements LinkedlistAdt<E> {
 
     @Override
     public E remove() {
-        return null;
+        return removeFirst();
     }
 
     @Override
