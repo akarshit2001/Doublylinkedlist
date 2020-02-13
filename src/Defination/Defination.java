@@ -87,6 +87,7 @@ public class Defination<E> implements LinkedlistAdt<E> {
             throw new IndexOutOfBoundsException(Integer.toString(index));
         } else if (index == 0) {
             return removeFirst();
+
         } else {
             Node<E> store = getNode(index - 1);
             return removeAfter(store);
