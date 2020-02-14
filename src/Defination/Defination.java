@@ -107,7 +107,20 @@ public class Defination<E> implements LinkedlistAdt<E> {
 
     @Override
     public int search(E item) {
-        return 0;
+        Node<E> temp = head;
+        int c = 0;
+        for (int i = 0; i < size; i++) {
+
+            E response = temp.getData();
+            if (response.equals(item)) {
+                c = 1;
+
+            }
+            temp = temp.getNext();
+
+        }
+        return c;
+
     }
 
     @Override

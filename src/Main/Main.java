@@ -12,7 +12,13 @@ public class Main {
         def.add(896);
         int c = def.remove(2);
         System.out.println(c);
+        int v = def.search(896);
         System.out.println(def.toString());
+        if (v == 1) {
+            System.out.println("Congrats! your element is present");
+        } else {
+            System.out.println("Ooops! Your element is not present");
+        }
 
     }
 }
