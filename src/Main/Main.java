@@ -13,6 +13,7 @@ public class Main {
         int c = def.remove(2);
         System.out.println(c);
         int v = def.search(896);
+        int a = 0;
         System.out.println(def.toString());
         if (v == 1) {
             System.out.println("Congrats! your element is present");

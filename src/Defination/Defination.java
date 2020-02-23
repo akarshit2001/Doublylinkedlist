@@ -23,6 +23,7 @@ public class Defination<E> implements LinkedlistAdt<E> {
 
     }
 
+
     public void addAfter(Node<E> node, E data) {
         Node<E> nextNode = node.getNext();
         if (nextNode == null) {
